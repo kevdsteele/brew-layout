@@ -22,6 +22,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 <link rel="stylesheet" type ="text/css" href="assets/css/style.css">
 
+<!--Tockify Event Calendar-->
+
+<script data-cfasync="false" data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
+
 <!--Javascript-->
 <script type ="text/javascript" src="assets/javascript/script.js"></script>
 
@@ -33,13 +37,81 @@
 
 <body id="page-top">
 
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand" href="#page-top">H<img class="brand-img" src ="assets/images/hop.png">P'N Brew</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#search">Search</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#events">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#team">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>    
+
 <!-- Header -->
   <header class="masthead">
         <div class="container">
           <div class="intro-text">
-            <div class="intro-lead-in">Welcome To Our Studio!</div>
-            <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+               <!-- <img src="assets/images/HopnBrew.jpg" alt="Hop'n Brew"> -->
+                <p class="logo" class="w3-animate-fading">Connecting the DMV to a Hop'n Brew!!!</p> 
+
+                <!--<div class="card-container">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <div class="flip-card-front">
+                                <h1 class="events">Events</h1>
+                              </div>
+                              <div class="flip-card-back">
+                                <h1>Events</h1> 
+                                <p>Local Events & Details</p> 
+                                <p>Click the link to view details </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="flip-card-contact">
+                              <div class="flip-card-inner-contact">
+                                <div class="flip-card-front-contact">
+                                  <h1 class="events">Contact Info.</h1>
+                                </div>
+                                <div class="flip-card-back-contact">
+                                  <h1>Contact</h1> 
+                                  <p>Sign Up & Membership</p> 
+                                  <p>Click to enter your information</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="flip-card-learn">
+                                <div class="flip-card-inner-learn">
+                                  <div class="flip-card-front-learn">
+                                    <h1 class="events">Craft'n Learn</h1>
+                                  </div>
+                                  <div class="flip-card-back-learn">
+                                    <h1>Crafting</h1> 
+                                    <p>Brew Recipes</p> 
+                                    <p>Click to view available recipes</p>
+                                  </div>
+                                </div>
+                              </div>
+                      </div>-->
+           
+            <a class="btn  btn-xl text-uppercase" id="search-btn" href="#search">Search for a Brewery</a>
           </div>
         </div>
 </header>
@@ -48,6 +120,15 @@
 <!-- Search Section -->
  
 <section class="search-box page-section" id="search">
+
+        <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Search for a Brewery in the DMV </h2>
+            
+                  </div>
+                </div>
+    
     <div class="container-fluid">
         <div class="row" id="results-header">
             <div class="col-md-6">
@@ -75,8 +156,170 @@
 </div>
 
 <!--End Search Section-->
-</section>        
+</section>  
 
+<!-- Events Section -->
+
+<section class="page-section" id="events">
+
+        <div class="container-fluid">
+                <div class="row">
+                  <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">HOP'N Events in the DMV </h2>
+
+                  </div>
+                  
+                  
+                </div>
+                
+        </div>    
+        <div data-tockify-component="pinboard" data-tockify-calendar="brewconnoisseur"></div>    
+              
+    </section>
+
+
+<!--End Event-->
+
+<!-- Team Section-->
+
+<!-- Team -->
+<section class="bg-light page-section" id="team">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">The HOP'N Web Developement Team</h2>
+              <h3 class="section-subheading text-muted"></h3>
+            </div>
+          </div>
+
+         
+
+          <div class="row text-center">
+            <div class="col-sm-4">
+              <div class="team-member">
+                <img class="mx-auto rounded-circle" src="assets/images/istockphoto-986668438-612x612.jpg" alt="">
+                <h4>Melvin Moore </h4>
+                <p class="text-muted">Lead Designer</p>
+                <ul class="list-inline social-buttons">
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="team-member">
+                <img class="mx-auto rounded-circle" src="assets/images/istockphoto-986668438-612x612.jpg" alt="">
+                <h4>Norman Capers</h4>
+                <p class="text-muted">Designer</p>
+                <ul class="list-inline social-buttons">
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="team-member">
+                <img class="mx-auto rounded-circle" src="assets/images/istockphoto-986668438-612x612.jpg" alt="">
+                <h4>Kevin Steele</h4>
+                <p class="text-muted">Developer</p>
+                <ul class="list-inline social-buttons">
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          
+
+        </div>
+          
+      </section>
+    
+
+
+<!--End Team Section -->
+
+<!-- Contact Form Section-->
+<section class="page-section contact-form" id="contact" >
+
+<div class="container">
+
+ 
+        <div class="col-lg-8">
+            <br>
+          
+              <div class="row">
+                 <br>
+                  <div class="form-group col-md-7">
+                  <input class="form-control form-control-lg" id="name-input" placeholder="Your Name:" type="text">
+                  </div>
+              </div>
+  
+              <div class="row">
+                  <div class="form-group col-md-7">
+                  <input class="form-control form-control-lg" id="email-input" placeholder="Your Email:" type="email">    
+                  </div>
+              </div>
+  
+              <div class="row">
+                  <div class="form-group col-md-7">
+                  <textarea class="form-control form-control-lg" id="messages-input" placeholder="Your Message:" rows="5"></textarea>
+                  </div>  
+              </div>
+  
+              <div class="row">
+              <div class="form-group col-md-7 justify-content-center">
+                <button class="btn btn-secondary btn-lg" id="add-user" type="submit">Send Message</button>
+                </div>  
+              </div>
+  
+        </div>
+  
+      </div>
+
+
+</section>
 
 
 
