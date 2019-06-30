@@ -17,6 +17,10 @@
 <!--Jquery-->
  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
   
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:300,100' rel='stylesheet' type='text/css'>
 
 <!--CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
@@ -25,6 +29,9 @@
 <!--Tockify Event Calendar-->
 
 <script data-cfasync="false" data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
+
+<!--Beer mug script-->
+<script type="text/javascript" src="https://leaverou.github.io/prefixfree/prefixfree.min.js"></script>
 
 <!--Javascript-->
 <script type ="text/javascript" src="assets/javascript/script.js"></script>
@@ -69,49 +76,31 @@
   <header class="masthead">
         <div class="container">
           <div class="intro-text">
-               <!-- <img src="assets/images/HopnBrew.jpg" alt="Hop'n Brew"> -->
-                <p class="logo" class="w3-animate-fading">Connecting the DMV to a Hop'n Brew!!!</p> 
-
-                <!--<div class="card-container">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                              <div class="flip-card-front">
-                                <h1 class="events">Events</h1>
-                              </div>
-                              <div class="flip-card-back">
-                                <h1>Events</h1> 
-                                <p>Local Events & Details</p> 
-                                <p>Click the link to view details </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="flip-card-contact">
-                              <div class="flip-card-inner-contact">
-                                <div class="flip-card-front-contact">
-                                  <h1 class="events">Contact Info.</h1>
-                                </div>
-                                <div class="flip-card-back-contact">
-                                  <h1>Contact</h1> 
-                                  <p>Sign Up & Membership</p> 
-                                  <p>Click to enter your information</p>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="flip-card-learn">
-                                <div class="flip-card-inner-learn">
-                                  <div class="flip-card-front-learn">
-                                    <h1 class="events">Craft'n Learn</h1>
-                                  </div>
-                                  <div class="flip-card-back-learn">
-                                    <h1>Crafting</h1> 
-                                    <p>Brew Recipes</p> 
-                                    <p>Click to view available recipes</p>
-                                  </div>
-                                </div>
-                              </div>
-                      </div>-->
-           
-            <a class="btn  btn-xl text-uppercase" id="search-btn" href="#search">Search for a Brewery</a>
+              <div class="intro-text">
+                  <div class="intro-lead-in">Welcome To HOP'N Brew</div>
+                  <div class="intro-heading text-uppercase">Your DMV Resource for fidning local breweries and HOP'N Events!</div>
+            <section>
+                <div id="action">
+                    <div id="keg">
+                        <div id="pipe-handle"></div>
+                        <div id="pipe"></div>       
+                        <div id="pipe-front"></div>
+                    </div>
+                
+                    <div class="glass">
+                        <div class="beer"></div>
+                        <div class="handle">
+                            <div class="top-right"></div>
+                            <div class="bottom-right"></div>
+                        </div>
+                        <div class="front-glass"></div>
+                    </div>
+                </div>
+            </section>
+            
+            
+         
+           <!-- <a class="btn btn-xl text-uppercase" id="landing-search-btn" href="#search">Search for a Brewery</a> -->
           </div>
         </div>
 </header>
@@ -127,21 +116,74 @@
                     <h2 class="section-heading text-uppercase">Search for a Brewery in the DMV </h2>
             
                   </div>
+                  
                 </div>
+                <div class="container" id="search-bar">
+                        
+                                <div class="row">
+                                        <div class="col-lg-2 col-md-2 col-sm-12 p-0">
+                                                
+                                            </div>
+                                            <div class="col-lg-2 col-md-2 col-sm-12 p-0 text-right">
+                                                    <button type="button" class="btn btn-secondary w-100" id="search-btn">Search</button>
+                                                </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-12 p-0">
+                                                <select class="form-control search-slt" id="zip-select">
+                                                        <option zip="20009">Select DMV State</option>
+                                                        <option zip="20009">Washigton DC</option>
+                                                        <option zip="20910">Maryland</option>
+                                                        <option zip="22201">Virginia</option>
+                                                  
+                                                    </select>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-12 p-0">
+                                                <select class="form-control search-slt" id="rad-select">
+                                                        <option radius="">Select Radius</option>
+                                                        <option radius="1609">1 Mile</option>
+                                                        <option radius="4827">3 Miles</option>
+                                                        <option radius="8045">5 Miles</option>
+                                                        <option radius="16090">10 Miles</option>
+                                                      
+                                                    </select>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2 col-sm-12 p-0">
+                                            <select class="form-control search-slt" id="yelp-select">
+                                                <option rating="0">Select Yelp Rating</option>
+                                                <option rating="3">3+ Stars</option>
+                                                <option rating="4">4+ Stars</option>
+                                                <option rating="5">5 Stars</option>
+                                                
+                                            </select>
+                                        </div>
+                                       
+                                        <div class="col-lg-2 col-md-2 col-sm-12 p-0">
+                                                
+                                            </div>
+                                </div>
+                  
+               </div>  
+                        
+                      
     
     <div class="container-fluid">
         <div class="row" id="results-header">
-            <div class="col-md-6">
+            <div class="col-md-12">
+                    
                 <nav aria-label="search navigation" id="pag-nav">
-                    <ul class="pagination justify-content-left " id="search-nav">
-                        <li class="page-item page-link pager disabled">Results</li>
+                    <span class="d-inline-block"><ul class="pagination justify-content-left w-25 ">
+                        <li class="pr-2">Results</li>
                                           
                     </ul>
+                   </span>
+                   <span class="d-inline-block">
+                    <ul class="pagination justify-content-right " id="search-nav">
+                        
+                                          
+                    </ul>
+                    </span>
                 </nav>
             </div>
-        <div class="col-md-6 mx-0 px-0">
-   
-        </div>
+       
     </div>  
 
     <div class="row">
@@ -183,7 +225,7 @@
 <!-- Team Section-->
 
 <!-- Team -->
-<section class="bg-light page-section" id="team">
+<section class="page-section" id="team">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
@@ -285,11 +327,14 @@
 
 <div class="container">
 
- 
+ <div class="col-lg-5">
+    <h3 class="section-heading text-left contact">Want to stay connected to what is HOP'N in the DMV? Join our mailing list!</h3>
+ </div>
         <div class="col-lg-8">
-            <br>
+            
           
               <div class="row">
+               
                  <br>
                   <div class="form-group col-md-7">
                   <input class="form-control form-control-lg" id="name-input" placeholder="Your Name:" type="text">
@@ -310,7 +355,7 @@
   
               <div class="row">
               <div class="form-group col-md-7 justify-content-center">
-                <button class="btn btn-secondary btn-lg" id="add-user" type="submit">Send Message</button>
+                <button class="btn btn-secondary btn-lg" id="send-msg" type="submit">Join Now!</button>
                 </div>  
               </div>
   

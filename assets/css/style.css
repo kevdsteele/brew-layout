@@ -1,3 +1,4 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 /*landing page header with full screen background image*/
 html {
     scroll-behavior: smooth;
@@ -5,33 +6,74 @@ html {
 
 body {
 overflow-x: hidden;
-background-color: #fff;
+
 }
 
-.brand-image {
-margin: 0px;
-}
+
 
 /*Navbar CSS */
 
 #mainNav {
-  background-color:#440606;
-  
+  background-color:#390608;
+  font-family: 'Fredericka the Great', cursive;
+
+
+}
+
+#mainNav a {
+    color:#fef7e9
+    
 }
 .navbar-brand {
-    color:#d28816;
+   
 }
 
+.intro-text {
+  padding-top: 75px;
+  padding-bottom: 50px;
 
-#search-btn {
-background-color:black;
+color:#fef7e9;
+text-shadow: 2px 2px #390608;
+}
+
+.intro-text, .intro-lead-in {
+  font-size: 42px;
+ 
+  line-height: 42px;
+  margin-bottom: 25px;
+  font-family: 'Fredericka the Great', cursive;
+
+}
+
+.intro-text, .intro-heading {
+  font-size: 24px;
+ 
+  line-height: 40px;
+ 
+font-family: 'Fredericka the Great', cursive;
+
+}
+
+#landing-search-btn {
+  margin-top:20px;
+  background-color:#390608;
+  font-family: 'Fredericka the Great', cursive;
+  color:#fef7e9;
+  }
+
+#search-btn  {
+background-color:#390608;
+font-family: 'Fredericka the Great', cursive;
+}
+#search-bar {
+padding-bottom:20px;
 }
 
 
   .masthead {
     text-align: center;
-    
-    background-image: url("../images/BreweryLandingPage_5.jpg");
+    font-family: 'Fredericka the Great', cursive;
+    background-image: url("../images/landing.jpg");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -41,12 +83,13 @@ background-color:black;
   }
 
   .page-section {
-padding-top:100px;
+padding-top:75px;
   }
 
-  .service-heading {
-    padding-bottom:25px;
-    text-transform: none;
+  .section-heading {
+    padding-bottom:10px;
+   color:#390608;
+   font-family: 'Fredericka the Great', cursive;
   }
 
 
@@ -56,17 +99,12 @@ padding-top:100px;
 
 
   
-  /*h4{float:left; width:100%; color:#d28816; margin-bottom:40px; font-size: 14px; position:relartive; z-index:3; margin-top:30px}
-  h4 span{font-family: 'Libre Baskerville', serif; display:block; font-size:45px; text-transform:none; margin-bottom:20px; margin-top:30px; font-weight:700}
-  h4 a{color:#d28816; font-weight:bold;}*/
+ 
   
-  body{ 
-  /*background: linear-gradient(to bottom,#fef7e9, #d28816);*/
-
-  }
+ 
   .head{float:left;width:100%;}
   .search-box{width:90%; margin:0 auto 40px; }
-  .listing-block{background:#fef7e9; height:500px; padding-top:20px; overflow-y:scroll;}
+  .listing-block{background:#fef7e9; height:400px; padding-top:20px; overflow-y:scroll;}
  
   .media {background:#fff; position:relative; margin-bottom:15px;}
   .media img{width:200px;margin:0; height:136px;}
@@ -81,7 +119,7 @@ padding-top:100px;
   .map-box{background-color:#A3CCFF;}
 
   #gmap {
-  height:500px;
+  height:400px;
   width:100%;
   
   }
@@ -94,7 +132,13 @@ color:#d28816;
  font-weight:bold;
  text-decoration:underline;
  }
+
+ #pag-nav {
+font-size:18px;
+ }
   
+
+/*CSS for stars in results  */
 
  .stars-outer {
   display: inline-block;
@@ -137,6 +181,7 @@ width:50%;
 background-color: #fef7e9;
 border: solid 1px ; color:#bcbcbc;
 color:#d28816;
+font-family: 'Fredericka the Great', cursive;
 
 }
 
@@ -172,6 +217,7 @@ color:#d28816;
     margin-bottom: 0;
     text-transform: none;
     color:#d28816;
+    font-family: 'Fredericka the Great', cursive;
   }
   
   .team-member p {
@@ -180,271 +226,7 @@ color:#d28816;
 
   /*Lading Page CSS */
 
-  .flip-card {
-    background-color: #000000;
-    background-blend-mode: lighten;
-    width: 200px;
-    height: 150px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px;
-    border-radius: 25px;
-  }
   
-  .card-container {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-  }
-  
-  .flip-card-inner {
-    position: relative;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 #ffd700(0,0,0,0.2);
-    border-radius: 25px;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-    border-radius: 25px;
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 25px;
-    background-color: #000000;
-    color: #008000; 
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color: #ffd700;
-    color: black;
-    font-family:'Fredericka the Great', cursive;
-    border-radius: 25px;
-    margin-top: 50px;
-  }
-  /* Style the back side */
-  .flip-card-back {
-    background-color: dodgerblue;
-    color: #ffd700;
-    transform: rotateY(180deg);
-    border-radius: 25px;
-  }
-  
-  h1{
-  color: aliceblue;
-  }
-  
-  .flip-card-contact {
-    background-color: #000000;
-    width: 200px;
-    height: 150px;
-    border: 1px solid #f1f1f1;
-    /* perspective: 1000px; */
-    border-radius: 25px;
-    position: relative;
-     /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner-contact {
-    position: relative;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 #ffd700(0,0,0,0.2);
-    border-radius: 25px;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card-contact:hover .flip-card-inner-contact {
-    transform: rotateY(180deg);
-    border-radius: 25px;
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front-contact, .flip-card-back-contact {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 25px;
-    background-color: #000000;
-    color: #008000; 
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front-contact {
-    background-color: #ffd700;
-    color: black;
-    font-family:'Fredericka the Great', cursive;
-    border-radius: 25px;
-    margin-top: 40px;
-  }
-  /* Style the back side */
-  .flip-card-back-contact {
-    
-    color: #ffd700;
-    transform: rotateY(180deg);
-    border-radius: 25px;
-  }
-  
-  .flip-card-learn {
-    background-color: #000000;
-    width: 200px;
-    height: 150px;
-    border: 1px solid #f1f1f1;
-    /* perspective: 1000px; */
-    border-radius: 25px;
-    position: relative;
-     /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner-learn {
-    position: relative;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 #ffd700(0,0,0,0.2);
-    border-radius: 25px;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card-learn:hover .flip-card-inner-learn {
-    transform: rotateY(180deg);
-    border-radius: 25px;
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front-learn, .flip-card-back-learn {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 25px;
-    background-color: #000000;
-    color: #008000; 
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front-learn {
-    background-color: #ffd700;
-    color: black;
-    font-family:'Fredericka the Great', cursive;
-    border-radius: 25px;
-    margin-top: 30px;
-  }
-  /* Style the back side */
-  .flip-card-back-learn {
-    
-    color: #ffd700;
-    transform: rotateY(180deg);
-    border-radius: 25px;
-  }
-  
-  /* This section provides letter animation */
-  * {
-    box-sizing: border-box;
-  }
-  
-  span {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .end-left {
-    margin-left: -235px;
-  }
-  
-  .end-right {
-    margin-right: -117.5px;
-  }
-  
-  .outline {
-    position: absolute;
-    top: 20px;
-  }
-  
-  .outline {
-    color: black;
-    -webkit-text-fill-color: transparent;
-    /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #ffd700;
-    font-size: 64px;
-    font-family: 'Fredericka the Great', cursive;
-  }
-  
-  .orbs {
-    font-family: 'Fredericka the Great', cursive;
-    font-weight: 100;
-    display: block;
-    font-size: 128px;
-  }
-  .orbs span {
-    color: red;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    text-shadow: 0 0 20px orange, 1px 1px 20px orange, 2px 2px 20px orange, -1px -1px 20px orange, -2px -2px 20px orange;
-    
-  }
-  .orbs span:first-child {
-    margin-left: -210px;
-  }
-  .orbs span:not(:first-child) {
-    margin-left: -35px;
-  }
-  
-  .glow {
-    opacity: 0;
-    font-family: 'Arvo', serif;
-    font-weight: 300;
-    color: orange;
-    margin-left: -222.5px;
-    font-size: 105px;
-    position: absolute;
-    top: 200px;
-    left: 50%;
-  }
-  
-  .logo{
-  color: #ffa500;
-
-  margin-top: 60px;
-  font-size: 40px;
-  font-weight: 500;
-  text-shadow: 0 0 20px #000000, 1px 1px 20px #000000, 2px 2px 20px #000000, -1px -1px 20px  #000000, -2px -2px 20px #000000;
-  outline: #000000;
-  padding-bottom: 3%;
-  
-  
-  }
-
-  .masthead-brand{
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 45px;
-    font-weight: 600px;
-    margin-left: 300px;
-    padding-top: 200px;
-    color: #ffd700;
-    text-shadow: 8px 8px 8px green;
-    align-items: center
-    
-  }
-  .events {
-    text-align: middle;
-    color: #008000;
-  }
-
   /* contact form css */
 
   .contact-form {
@@ -461,4 +243,260 @@ color:#d28816;
 
 
   }
+
+  #send-msg{
+    background-color:#390608;
+    font-family: 'Fredericka the Great', cursive;
+  color: #fef7e9
+  }
+
+  .contact {
+  color: #fef7e9;
+  text-shadow: 1px 1px #390608;
+  }
+
+
+
+
+  /* animated beer mug */
+  
+
+  #action {
+    margin: 0 auto;
+    width: 700px;
+    position: relative;
+    height: 300px;
+   
+}
+
+#keg {
+    position: absolute;
+    height: 200px;    
+    width: 70px;
+    background-color: #fef7e9;
+    border-right: solid 20px #390608;;
+    bottom: 0;
+    left: 310px;
+}
+#pipe {
+    position: absolute;
+    height: 30px;
+    width: 10px;
+    top: 30px;
+    left: 10px;
+    background-color: #CCD1D9;
+}
+
+#pipe:before {
+    position: absolute;
+    display: block;
+    content: " ";
+    height: 20px;
+    width: 30px;
+    top: -5px;
+    left: 5px;
+    background: linear-gradient(to bottom, #CCD1D9 50%, #AAB2BD 50%);
+    border-radius: 0 10px 10px 0;
+}
+
+#pipe:after {
+    position: absolute;
+    display: block;
+    content: " ";
+    width: 10px;
+    background-color: rgba(255, 206, 84, 0.5);
+    
+    animation: flow 5s ease infinite;
+}
+
+@keyframes flow {
+    0%, 15% { 
+        top: 30px;
+        height: 0px;
+    }
+    20% { 
+         height: 125px;
+    }
+    40% {        
+        top: 30px;
+        height: 85px;
+    }
+    55% {
+        top: 30px;
+        height: 60px;
+    }
+    60%, 100% {
+        top: 70px;
+        height: 0px;
+    }
+}
+
+#pipe-front {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    top: 25px;
+    left: 5px;
+    background-color: #F5F7FA;
+    border-radius: 10px;
+    border: solid 3px #CCD1D9;
+}
+
+#pipe-handle {
+    transform-origin: center bottom;
+    position: absolute;
+    width: 0;
+    height: 5px;
+    top: -20px;
+    left: 5px;
+    border-style: solid;
+    border-width: 50px 10px 0 10px;
+    border-color: black transparent transparent transparent;
+    
+    animation: handle 5s ease infinite;    
+}
+#pipe-handle:before {
+    position: absolute;
+    top: -60px;
+    left: -10px;
+    display: block;
+    content: ' ';
+    width: 20px;
+    height: 10px;
+    background-color: #CCD1D9;
+    border-radius: 5px 5px 0 0;
+}
+#pipe-handle:after {
+    position: absolute;
+    top: -20px;
+    left: -5px;
+    display: block;
+    content: ' ';
+    width: 10px;
+    height: 20px;
+    background-color: #CCD1D9;
+}
+@keyframes handle {
+    0%, 10% { 
+       transform: rotate(0deg);
+    }
+    20%, 50% { 
+         transform: rotate(-90deg);
+    }
+    60%, 100% {
+        transform: rotate(0deg);
+    }
+}
+
+.glass {    
+    position: absolute;
+    height: 100px;
+    width: 70px;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.0);
+    border-radius: 5px;
+    
+    animation: slide 5s ease forwards infinite;
+}
+
+@keyframes slide {
+    0% { 
+        opacity: 0;
+        left: 0; 
+    }
+    20%, 80% { 
+        opacity: 1;
+        left: 300px; 
+    }
+    100% {
+         opacity: 0;
+        left: 600px;
+    }
+}
+
+.front-glass {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);   
+    border-radius: 5px;
+}
+
+.beer {
+    position: absolute;
+    bottom: 15px;
+    margin: 0 5px;
+    /*height: 80%;*/
+    width: 60px;
+    background-color: rgba(176, 79, 0, 0.8); /* #FFCE54*/
+    border-radius: 0 0 5px 5px;
+    border-top: solid 0px rgba(255, 206, 84, 0.8);
+    
+    animation: fillup 5s ease infinite;
+}
+.beer:after {
+    position: absolute;
+    display: block;
+    content: " ";
+    /*height: 20px;*/
+    width: 100%;
+    background-color: white;
+    /*top: -20px;*/
+    border-radius: 5px 5px 0 0;
+    
+    animation: fillupfoam 5s linear infinite, wave 0.5s alternate infinite;
+}
+
+.handle {
+    position: absolute;
+    right: -20px;
+    top: 20px;
+}
+.handle .top-right {
+    height: 20px;
+    width: 10px;
+    border-top: solid 10px rgba(255, 255, 255, 0.4);
+    border-right: solid 10px rgba(255, 255, 255, 0.4);
+    border-top-right-radius: 20px;
+}
+.handle .bottom-right {
+    height: 20px;
+    width: 10px;
+    border-bottom: solid 10px rgba(255, 255, 255, 0.4);
+    border-right: solid 10px rgba(255, 255, 255, 0.4);
+    border-bottom-right-radius: 20px;
+}
+
+@keyframes fillup {
+    0%, 20% { 
+        height: 0px; 
+        border-width: 0px;
+    }
+    40% {
+        height: 40px; 
+    }
+    80%, 100% { 
+        height: 80px; 
+        border-width: 5px;
+    }
+}
+@keyframes fillupfoam {
+    0%, 20% { 
+        top: 0px;
+        height: 0px; 
+    }
+    60%, 100% { 
+        top: -14px;
+        height: 15px; 
+    }
+}
+@keyframes wave {
+    from { 
+        transform: skew(0, -3deg);
+    }
+    to { 
+        transform: skew(0, 3deg);
+    }
+}
+
 

@@ -2,22 +2,58 @@ $(document).ready(function () {
     
     var breweries=[];
     infowindow = new google.maps.InfoWindow();
-    var mainloc = {lat:38.889931, lng: -77.009003};  
-    var map = new google.maps.Map(document.getElementById('gmap'), {zoom: 12, center: mainloc}); 
-    map = new google.maps.Map(document.getElementById('gmap'), {zoom: 11, center: mainloc});        
-    var zip=20009;
-    var radius=20000;
-    var rating=0;
+    var mainloc = {lat:38.92039, lng: -77.03856}
+    var map = new google.maps.Map(document.getElementById('gmap'), {zoom: 11, center: mainloc}); 
+    var zip;   
+    var rating;
+    var offset;
     var breweries=[];
-    var offset=0;
+    var radius;
 
-getBrewPages();
+    var dcloc= {lat:38.92039, lng: -77.03856}; 
+    var mdloc = {lat:39.00335, lng: -77.035446}; 
+    var valoc= {lat:38.88659, lng: -77.09473};
+
+$("#search-btn").on("click", function () {
+offset=parseInt(0);
+      
+  zip=$("#zip-select option:selected").attr("zip");
+  radius=$("#rad-select option:selected").attr("radius");
+  rating=$("#yelp-select option:selected").attr("rating");
+  console.log("Zip selected is" + zip)
+
+  /*if (zip=20009) {
+    mainloc=dcloc;
+  } else if (zip=22201) {
+    mainloc=valoc;
+  } else {
+    mainloc=mdloc
+  }*/
+
+  map = new google.maps.Map(document.getElementById('gmap'), {zoom: 11, center: mainloc});  
+  
+  rating=0;
+  breweries=[];
+  offset=0;
+  getBrewPages(zip, radius, rating);
+
+  getBreweries(offset, zip,radius,rating)
+
+  
+
+  
+
+
+});
+
+ 
     
-function getBrewPages () {
+function getBrewPages (zip) {
+  
             var settings = {
                     "async": true,
                     "crossDomain": true,
-                    "url": "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + zip + "&radius=20000&term=breweries&categories=breweries&rating=4&sort_by=distance&limit=50",
+                    "url": "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + zip + "&radius=" + radius + "&term=breweries&categories=breweries&rating=" + rating + "&sort_by=distance&limit=50",
                     "method": "GET",
                     "headers": {
                       "Authorization": "Bearer 8D_mZteQabQeW-jEZAK4kU4o9h7PhhECcqPsritDt99eippSSN851BkePtOuCLpVShTshzeKUUKDiHj51cX4vJMN0YZY_tPNJVTsapTBgoWt0dErzhHH1psW0FYKXXYx",
@@ -47,7 +83,7 @@ function getBrewPages () {
             createNav();
                    
             function createNav() {
-            
+            $("#search-nav").empty();
                 console.log("number of pages is " + brewPages)
                 offset=0;
                 for (i=1; i <= brewPages; i++ ) {
@@ -69,7 +105,7 @@ function getBrewPages () {
             
             }   
           
-       
+    
     
         
        $(document).on ("click", ".page-link", function (){
@@ -90,7 +126,7 @@ function getBrewPages () {
             var settings = {
                 "async": true,
                 "crossDomain": true,
-                "url": "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + zip + "&radius=20000&term=breweries&categories=breweries&rating=4&sort_by=distance&limit=10&offset=" +offset ,
+                "url": "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + zip + "&radius=" +radius + "&term=breweries&categories=breweries&rating=" + rating + "&sort_by=distance&limit=10&offset=" +offset ,
                 "method": "GET",
                 "headers": {
                   "Authorization": "Bearer 8D_mZteQabQeW-jEZAK4kU4o9h7PhhECcqPsritDt99eippSSN851BkePtOuCLpVShTshzeKUUKDiHj51cX4vJMN0YZY_tPNJVTsapTBgoWt0dErzhHH1psW0FYKXXYx",
@@ -251,7 +287,7 @@ function getBrewPages () {
              }
          
             }
-      
+      offset=0;
          }
     
     
