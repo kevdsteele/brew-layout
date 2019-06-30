@@ -291,8 +291,62 @@ function getBrewPages (zip) {
          }
     
     
+    /*Contact Form Processing */
+
+    var firebaseConfig = {
     
+    apiKey: "AIzaSyDE3_11naowktsLw-bEZxFSwOv8VawBMkc",
+    authDomain: "hopinbrew.firebaseapp.com",
+    databaseURL: "https://hopinbrew.firebaseio.com",
+    projectId: "hopinbrew",
+    storageBucket: "hopinbrew.appspot.com",
+    messagingSenderId: "839591263082",
+    appId: "1:839591263082:web:07ec0df0eea18972"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  var database = firebase.database();
+
+    // Capture Button Click
+    $("#join").on("click", function(event) {
+      // prevent page from refreshing when form tries to submit itself
+      event.preventDefault();
+
+      console.log ("Join clicked")
+
+      // Capture user inputs and store them into variables
+      var name = $("#name-input").val().trim();
+      var email = $("#email-input").val().trim();
+      var messages = $("#messages-input").val().trim();
+      
+      var newMember = {
+          name: name,
+          email: email,
+          messages: messages,
+          };
+
+      database.ref().push(newMember);
+      
+      // Console log each of the user inputs to confirm we are receiving them
+      console.log(name);
+      console.log(email);
+      console.log(messages);
+      
+            // Clear sessionStorage
+      sessionStorage.clear();
+
+      // Store all content into sessionStorage
+      sessionStorage.setItem("name", name);
+      sessionStorage.setItem("email", email);
+      sessionStorage.setItem("messages", messages);
+
+      $("#contact-form").reset();
+
+ });
+
     
+  
         
        
         
